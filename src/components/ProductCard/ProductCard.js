@@ -12,7 +12,7 @@ function ProductCard() {
       <section>
         <h2>PERFUME</h2>
         <h1>Gabrielle Essence Eau De Parfum</h1>
-        <p>
+        <p className={styles.info}>
           A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator
           for the House of CHANEL.
         </p>

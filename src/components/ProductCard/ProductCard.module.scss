@@ -8,9 +8,35 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     max-width: 300px;
     width: 100%;
+    padding: 32px;
+
+    h2 {
+      font-family: 'Montserrat';
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 5px;
+      color: var(--dark-grayish-blue);
+    }
+
+    h1 {
+      font-family: 'Fraunces';
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 32px;
+      color: var(--very-dark-blue);
+    }
+
+    .info {
+      font-family: 'Montserrat';
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 23px;
+      color: var(--dark-grayish-blue);
+    }
   }
 
   img {
