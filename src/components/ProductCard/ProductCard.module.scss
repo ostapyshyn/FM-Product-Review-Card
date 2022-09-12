@@ -1,17 +1,30 @@
+@import '../../index.scss';
+
 main {
   background-color: var(--white);
   border-radius: 10px;
   max-width: 600px;
+
   display: flex;
 
-  section {
-    display: flex;
+  @include mq(645px) {
     flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
+  }
+
+  section {
     max-width: 300px;
     width: 100%;
     padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include mq(645px) {
+      padding: 23px;
+      max-width: 350px;
+    }
 
     h2 {
       font-family: 'Montserrat';
@@ -20,6 +33,10 @@ main {
       line-height: 15px;
       letter-spacing: 5px;
       color: var(--dark-grayish-blue);
+
+      @include mq(645px) {
+        margin-bottom: 12px;
+      }
     }
 
     h1 {
@@ -28,6 +45,10 @@ main {
       font-size: 32px;
       line-height: 32px;
       color: var(--very-dark-blue);
+
+      @include mq(645px) {
+        margin-bottom: 16px;
+      }
     }
 
     .info {
@@ -36,6 +57,65 @@ main {
       font-size: 14px;
       line-height: 23px;
       color: var(--dark-grayish-blue);
+
+      @include mq(645px) {
+        margin-bottom: 24px;
+      }
+    }
+
+    .button {
+      font-family: 'Montserrat';
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: #ffffff;
+      background: var(--dark-cyan);
+      border-radius: 8px;
+      border: none;
+      max-width: 236px;
+      width: 100%;
+      padding-block: 15px;
+      cursor: pointer;
+
+      display: flex;
+      justify-content: center;
+
+      @include mq(645px) {
+        max-width: 350px;
+      }
+
+      span {
+        margin-left: 10px;
+      }
+    }
+
+    .prices {
+      max-width: 190px;
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include mq(645px) {
+        margin-bottom: 20px;
+      }
+
+      .price {
+        font-family: 'Fraunces';
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 32px;
+        color: var(--dark-cyan);
+      }
+      span {
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 23px;
+        text-decoration-line: line-through;
+        color: var(--dark-grayish-blue);
+      }
     }
   }
 
@@ -44,10 +124,21 @@ main {
     display: block;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    object-fit: cover;
+
+    @include mq(645px) {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0px;
+      height: 240px;
+    }
   }
 
   .parfumeImage {
     width: 100%;
     max-width: 300px;
+    @include mq(645px) {
+        max-width: 350px;
+      }
   }
 }

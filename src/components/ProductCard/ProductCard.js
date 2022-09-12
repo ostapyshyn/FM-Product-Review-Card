@@ -2,6 +2,8 @@ import React from 'react';
 import parfume from '../../assets/img/image-product-desktop.jpg';
 import styles from './ProductCard.module.scss';
 
+import { ReactComponent as Cart } from '../../assets/svg/icon-cart.svg';
+
 function ProductCard() {
   return (
     <main>
@@ -16,10 +18,16 @@ function ProductCard() {
           A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator
           for the House of CHANEL.
         </p>
-        <p>
-          $149.99 <span>$169.99</span>
-        </p>
-        <button>Add to Cart</button>
+
+        <div className={styles.prices}>
+          <p className={styles.price}>$149.99</p>
+          <span>$169.99</span>
+        </div>
+
+        <div className={styles.button}>
+          <Cart />
+          <span>Add to Cart</span>
+        </div>
       </section>
     </main>
   );
