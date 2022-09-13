@@ -75,17 +75,24 @@ main {
       max-width: 236px;
       width: 100%;
       padding-block: 15px;
+      outline: none;
       cursor: pointer;
+      transition: 0.3s;
 
       display: flex;
+      align-items: center;
       justify-content: center;
+
+      &:hover {
+        background-color: hsl(158, 38%, 20%);
+      }
+
+      svg {
+        margin-right: 0.5rem;
+      }
 
       @include mq(645px) {
         max-width: 350px;
-      }
-
-      span {
-        margin-left: 10px;
       }
     }
 
@@ -138,7 +145,7 @@ main {
     width: 100%;
     max-width: 300px;
     @include mq(645px) {
-        max-width: 350px;
-      }
+      max-width: 350px;
+    }
   }
 }

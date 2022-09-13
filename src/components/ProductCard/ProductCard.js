@@ -1,15 +1,16 @@
 import React from 'react';
 import parfume from '../../assets/img/image-product-desktop.jpg';
-import styles from './ProductCard.module.scss';
-
+import parfumeMobile from '../../assets/img/image-product-mobile.jpg';
 import { ReactComponent as Cart } from '../../assets/svg/icon-cart.svg';
+import styles from './ProductCard.module.scss';
 
 function ProductCard() {
   return (
     <main>
-      <div className={styles.parfumeImage}>
-        <img src={parfume} alt="parfume" />
-      </div>
+      <picture>
+        <source media="(min-width: 645px)" srcSet={parfume} />
+        <img src={parfumeMobile} alt="parfume" />
+      </picture>
 
       <section>
         <h2>PERFUME</h2>
@@ -24,10 +25,14 @@ function ProductCard() {
           <span>$169.99</span>
         </div>
 
-        <div className={styles.button}>
+        {/* <div className={styles.button}>
           <Cart />
           <span>Add to Cart</span>
-        </div>
+        </div> */}
+        <button className={styles.button}>
+          <Cart />
+          Add to Cart
+        </button>
       </section>
     </main>
   );
